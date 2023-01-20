@@ -1,0 +1,29 @@
+{
+	"name": "sel4-dev",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			//"SLE4_VERSION": "2023_01_12",
+			//"USERNAME": "vscode",
+			//"USER_UID": "1000",
+			//"USER_GID": "1000"
+		}
+	},
+	"mounts": [],
+	"runArgs": [
+		"--userns=keep-id",
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined",
+		"--security-opt",
+		"label=disable"
+	],
+	"settings": {},
+	"extensions": [
+		"rust-lang.rust-analyzer",
+		"twxs.cmake",
+		"ms-vscode.cmake-tools",
+		"llvm-vs-code-extensions.vscode-clangd",
+		"vadimcn.vscode-lldb"
+	]
+}
