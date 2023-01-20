@@ -16,3 +16,9 @@
 [submodule "projects/util_libs"]
 	path = projects/util_libs
 	url = https://github.com/seL4/util_libs.git
+[submodule "projects/capdl"]
+	path = projects/capdl
+	url = https://github.com/seL4/capdl.git
+[submodule "projects/camkes-tool"]
+	path = projects/camkes-tool
+	url = https://github.com/seL4/camkes-tool.git
