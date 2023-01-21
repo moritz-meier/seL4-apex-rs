@@ -1,0 +1,12 @@
+component main {
+	control;
+}
+
+assembly {
+	composition {
+		component main main_object;
+	}
+
+	configuration {
+	}
+}

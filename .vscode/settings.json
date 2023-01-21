@@ -4,4 +4,7 @@
 		"-DRELEASE=FALSE",
 		"-DSIMULATION=TRUE"
 	],
+	"rust-analyzer.linkedProjects": [
+		"projects/hello-rust/Cargo.toml"
+	]
 }
