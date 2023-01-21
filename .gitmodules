@@ -21,4 +21,7 @@
 	url = https://github.com/seL4/capdl.git
 [submodule "projects/camkes-tool"]
 	path = projects/camkes-tool
-	url = https://github.com/seL4/camkes-tool.git
+	url = https://github.com/moritz-meier/camkes-tool.git
+[submodule "projects/projects_libs"]
+	path = projects/projects_libs
+	url = https://github.com/seL4/projects_libs.git

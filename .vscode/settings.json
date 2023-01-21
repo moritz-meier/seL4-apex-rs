@@ -1,0 +1,7 @@
+{
+	"cmake.configureArgs": [
+		"-DPLATFORM=zynq7000",
+		"-DRELEASE=FALSE",
+		"-DSIMULATION=TRUE"
+	],
+}
