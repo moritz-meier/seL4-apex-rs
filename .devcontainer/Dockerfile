@@ -22,11 +22,12 @@ RUN sudo apt-get install -y clangd-13 && \
 	curl -sSL https://get.haskellstack.org/ | sh && \
 	pip install aenum ordered_set plyplus pyelftools sortedcontainers
 
+ENV PATH="$PATH:/home/${USERNAME}/.cargo/bin"
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
 	--no-modify-path \
+	--default-toolchain nightly \
 	--component clippy rust-src rust-analyzer \
 	--target armv7-unknown-linux-musleabi \
 	--target armv7-unknown-linux-musleabihf \
-	--target aarch64-unknown-linux-musl
-
-ENV PATH="$PATH:/home/${USERNAME}/.cargo/bin"
+	--target aarch64-unknown-linux-musl && \
+	cargo install xargo
