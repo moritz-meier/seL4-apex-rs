@@ -14,15 +14,13 @@ fn main() -> Result<()> {
     let include_dirs = get_include_dirs("/workspaces/seL4-apex-rs/build")?;
 
     let bindings = Builder::default()
-        .header("/workspaces/seL4-apex-rs/build/main_object/include/camkes.h")
+        .header("/workspaces/seL4-apex-rs/build/main_obj/include/camkes.h")
         .clang_args(include_dirs.map(|dir| format!("-I{}", dir.as_os_str().to_str().unwrap())))
         .use_core()
         .generate()?;
 
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
-    bindings
-        .write_to_file(out_path.join("bindings.rs"))
-        .expect("Couldn't write bindings!");
+    bindings.write_to_file(out_path.join("bindings.rs"))?;
 
     Ok(())
 }

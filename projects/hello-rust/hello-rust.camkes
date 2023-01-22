@@ -4,7 +4,7 @@ component main {
 
 assembly {
 	composition {
-		component main main_object;
+		component main main_obj;
 	}
 
 	configuration {
