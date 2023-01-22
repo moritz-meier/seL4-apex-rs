@@ -17,6 +17,7 @@ fn main() -> Result<()> {
         .header("/workspaces/seL4-apex-rs/build/main_obj/include/camkes.h")
         .clang_args(include_dirs.map(|dir| format!("-I{}", dir.as_os_str().to_str().unwrap())))
         .use_core()
+        .layout_tests(false)
         .generate()?;
 
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
