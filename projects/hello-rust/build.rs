@@ -11,8 +11,6 @@ use bindgen::Builder;
 use itertools::Itertools;
 
 fn main() -> Result<()> {
-    println!("cargo:warning=----------------------- Hello World, build.rs -----------------------");
-
     let include_dirs = get_include_dirs("/workspaces/seL4-apex-rs/build")?;
 
     let bindings = Builder::default()
@@ -25,8 +23,6 @@ fn main() -> Result<()> {
     bindings
         .write_to_file(out_path.join("bindings.rs"))
         .expect("Couldn't write bindings!");
-
-    println!("cargo:warning=OUT_DIR={out_path:?}");
 
     Ok(())
 }
