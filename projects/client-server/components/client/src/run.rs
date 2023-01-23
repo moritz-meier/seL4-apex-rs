@@ -6,7 +6,7 @@ fn panic(_panic: &core::panic::PanicInfo<'_>) -> ! {
     loop {}
 }
 
-use camkes_bindgen::printf;
+use camkes_bindgen::main_obj::printf;
 
 #[no_mangle]
 pub extern "C" fn run() -> isize {

@@ -10,4 +10,5 @@ edition = "2021"
 [build-dependencies]
 anyhow = "1.0.68"
 bindgen = "0.63.0"
+glob = "0.3.1"
 itertools = "0.10.5"
