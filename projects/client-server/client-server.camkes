@@ -1,8 +1,10 @@
 import "components/client/client.camkes";
+import "components/server/server.camkes";
 
 assembly {
 	composition {
-		component Client main_obj;
+		component Client client;
+		component Server server;
 	}
 
 	configuration {

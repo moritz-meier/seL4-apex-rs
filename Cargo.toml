@@ -3,6 +3,7 @@ members = [
 	"projects/camkes-bindgen",
 	"projects/hello-rust",
 	"projects/client-server/components/client",
+	"projects/client-server/components/server",
 ]
 
 [profile.dev]
