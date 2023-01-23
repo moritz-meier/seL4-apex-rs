@@ -21,6 +21,7 @@
 	"settings": {},
 	"extensions": [
 		"rust-lang.rust-analyzer",
+		"serayuzgur.crates",
 		"twxs.cmake",
 		"ms-vscode.cmake-tools",
 		"llvm-vs-code-extensions.vscode-clangd",

@@ -1,0 +1,10 @@
+import "components/client/client.camkes";
+
+assembly {
+	composition {
+		component Client main_obj;
+	}
+
+	configuration {
+	}
+}
