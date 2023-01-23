@@ -11,11 +11,14 @@ use bindgen::Builder;
 use itertools::Itertools;
 
 fn main() -> Result<()> {
-    let include_dirs = get_include_dirs("/workspaces/seL4-apex-rs/build")?;
+    let build_dir: PathBuf = env::var("RUST_BUILD_DIR")?.into();
+    let camkes_header = build_dir.join("main_obj/include/camkes.h");
+
+    let include_dirs = get_include_dirs(&build_dir)?;
 
     let bindings = Builder::default()
-        .header("/workspaces/seL4-apex-rs/build/main_obj/include/camkes.h")
-        .clang_args(include_dirs.map(|dir| format!("-I{}", dir.as_os_str().to_str().unwrap())))
+        .header(camkes_header.to_str().unwrap())
+        .clang_args(include_dirs.map(|dir| format!("-I{}", dir.to_str().unwrap())))
         .use_core()
         .layout_tests(false)
         .generate()?;

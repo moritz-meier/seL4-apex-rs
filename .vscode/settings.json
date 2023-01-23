@@ -9,5 +9,8 @@
 		"projects/camkes-bindgen/Cargo.toml",
 	],
 	"rust-analyzer.cargo.buildScripts.enable": true,
-	"rust-analyzer.cargo.target": "armv7-unknown-linux-musleabi"
+	"rust-analyzer.cargo.target": "armv7-unknown-linux-musleabi",
+	"rust-analyzer.server.extraEnv": {
+		"RUST_BUILD_DIR": "/workspaces/seL4-apex-rs/build"
+	}
 }
