@@ -4,11 +4,6 @@
 		"-DRELEASE=FALSE",
 		"-DSIMULATION=TRUE"
 	],
-	"rust-analyzer.linkedProjects": [
-		"projects/camkes-bindgen/Cargo.toml",
-		"projects/hello-rust/Cargo.toml",
-		"projects/client-server/components/client/Cargo.toml",
-	],
 	"rust-analyzer.cargo.buildScripts.enable": true,
 	"rust-analyzer.cargo.target": "armv7-unknown-linux-musleabi",
 	"rust-analyzer.server.extraEnv": {

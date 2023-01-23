@@ -1,0 +1,6 @@
+[workspace]
+members = [
+	"projects/camkes-bindgen",
+	"projects/hello-rust",
+	"projects/client-server/components/client",
+]
