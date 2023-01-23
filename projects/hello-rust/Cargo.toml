@@ -10,11 +10,5 @@ name = "main"
 path = "src/run.rs"
 crate-type = ["staticlib"]
 
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"
-
 [dependencies]
 camkes-bindgen = { path = "../camkes-bindgen" }

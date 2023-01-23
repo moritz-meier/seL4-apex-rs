@@ -2,5 +2,11 @@
 members = [
 	"projects/camkes-bindgen",
 	"projects/hello-rust",
-	"projects/client-server/components/client",
+	#"projects/client-server/components/client",
 ]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
