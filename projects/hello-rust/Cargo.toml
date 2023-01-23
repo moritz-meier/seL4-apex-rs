@@ -17,8 +17,4 @@ panic = "abort"
 panic = "abort"
 
 [dependencies]
-
-[build-dependencies]
-anyhow = "1.0.68"
-bindgen = "0.63.0"
-itertools = "0.10.5"
+camkes-bindgen = { path = "../camkes-bindgen" }
