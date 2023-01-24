@@ -6,6 +6,9 @@ fn panic(_panic: &core::panic::PanicInfo<'_>) -> ! {
     loop {}
 }
 
+#[no_mangle]
+extern "C" fn rust_eh_personality() {}
+
 use camkes_bindgen::client::{calc_add, calc_div, calc_mul, calc_sub, get_instance_name, printf};
 
 #[no_mangle]
