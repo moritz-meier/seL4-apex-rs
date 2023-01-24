@@ -1,0 +1,3 @@
+procedure Calc {
+	int add(in int a, in int b);
+};

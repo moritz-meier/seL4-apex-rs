@@ -6,6 +6,9 @@ fn panic(_panic: &core::panic::PanicInfo<'_>) -> ! {
     loop {}
 }
 
+#[no_mangle]
+extern "C" fn rust_eh_personality() {}
+
 use camkes_bindgen::server::printf;
 
 #[no_mangle]
@@ -15,4 +18,9 @@ pub extern "C" fn run() -> isize {
     }
 
     0
+}
+
+#[no_mangle]
+pub extern "C" fn calc_add(a: isize, b: isize) -> isize {
+    a + b
 }

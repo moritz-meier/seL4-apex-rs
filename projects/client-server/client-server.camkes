@@ -1,10 +1,15 @@
+import <std_connector.camkes>;
+
 import "components/client/client.camkes";
 import "components/server/server.camkes";
+import "interfaces/calc.idl4";
 
 assembly {
 	composition {
 		component Client client;
 		component Server server;
+
+		connection seL4RPCCall Calc(from client.calc, to server.calc);
 	}
 
 	configuration {
