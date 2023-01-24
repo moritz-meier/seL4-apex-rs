@@ -2,5 +2,6 @@ import "../../interfaces/calc.idl4";
 
 component Client {
 	control;
+	attribute int id;
 	uses Calc calc;
 }
