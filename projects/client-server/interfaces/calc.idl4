@@ -1,3 +1,6 @@
 procedure Calc {
 	int add(in int a, in int b);
+	int sub(in int a, in int b);
+	int mul(in int a, in int b);
+	int div(in int a, in int b);
 };

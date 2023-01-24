@@ -20,9 +20,24 @@ fn main() -> Result<()> {
         generate_bindings(&build_dir, &out_dir, &name, &camkes_header)?;
 
         includes.push(format!("pub mod {name} {{ include!(\"{name}.rs\"); }}"));
+        println!(
+            "cargo:rerun-if-changed={}",
+            camkes_header
+                .parent()
+                .unwrap()
+                .parent()
+                .unwrap()
+                .to_str()
+                .unwrap()
+        );
     }
 
     std::fs::write(out_dir.join("bindings.rs"), includes.join("\n"))?;
+
+    println!(
+        "cargo:rerun-if-changed={}",
+        build_dir.join("build.ninja").to_str().unwrap()
+    );
 
     Ok(())
 }
