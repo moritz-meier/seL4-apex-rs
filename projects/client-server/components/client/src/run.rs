@@ -43,10 +43,6 @@ pub extern "C" fn run() -> isize {
         let res = calc_div(a, b);
 
         printf("%s: calc_div(%d, %d) = %d\n\0".as_ptr(), name, a, b, res);
-
-        loop {
-            printf("%s: ....\n\0".as_ptr(), name);
-        }
     }
 
     0

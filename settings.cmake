@@ -24,6 +24,10 @@ correct_platform_strings()
 find_package(seL4 REQUIRED)
 sel4_configure_platform_settings()
 
+if(MCS)
+	set(KernelIsMCS ON CACHE BOOL "" FORCE)
+endif()
+
 if(SIMULATION)
     ApplyCommonSimulationSettings(${KernelSel4Arch})
 endif()
