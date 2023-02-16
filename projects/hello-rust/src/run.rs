@@ -6,13 +6,17 @@ fn panic(_panic: &core::panic::PanicInfo<'_>) -> ! {
     loop {}
 }
 
-//use camkes_bindgen::printf;
+use camkes_bindgen::main_obj;
+
+extern "C" {
+    fn seL4_DebugDumpScheduler();
+}
 
 #[no_mangle]
 pub extern "C" fn run() -> isize {
-    /*unsafe {
-        printf("Hello Camkes, Rust!\n\0".as_ptr());
-    }*/
+    unsafe {
+        seL4_DebugDumpScheduler();
+    }
 
     0
 }

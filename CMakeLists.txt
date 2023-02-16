@@ -12,8 +12,8 @@ endif()
 
 camkes_tool_setup_camkes_build_environment()
 
-include(projects/hello-world/CMakeLists.txt)
-#include(projects/hello-rust/CMakeLists.txt)
+#include(projects/hello-world/CMakeLists.txt)
+include(projects/hello-rust/CMakeLists.txt)
 #include(projects/client-server/CMakeLists.txt)
 
 GenerateCAmkESRootserver()

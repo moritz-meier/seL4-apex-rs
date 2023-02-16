@@ -13,6 +13,8 @@ list(
 
 set(SEL4_CONFIG_DEFAULT_ADVANCED ON)
 
+set(LibSel4FunctionAttributes public CACHE STRING "" FORCE)
+
 include(application_settings)
 
 if(ARM_HYP)
